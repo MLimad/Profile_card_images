@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  background: linear-gradient(#2196F3, #2196F3 30%, #1d3548 30%, #1d3548);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 999999;
+  transform-origin: top;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card:hover .imgBox {
+  transform: scale(0.5) translateY(30px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.card .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  transform: translateY(0);
+
+}
+
+
+
+.card .content  .details{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .content  .details h3{
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card .content  .details span{
+  color: #2196f3;
+  font-size: 16px;
+}
+
+.card .social{
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.card .social li {
+  list-style: none;
+  margin: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.card .social li a{
+
+  width: 45px;
+  height: 45px;
+  color: white;
+  font-size: 25px;
+  background-color: #294f69;
+  border-radius: 50%;
+  display: flex;
+  text-decoration:none;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+}
+
+.card .social li a:hover{
+  transform: rotate(360deg);
+  background-color: #2196f3
+}
